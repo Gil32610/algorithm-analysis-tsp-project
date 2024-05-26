@@ -13,13 +13,13 @@ O problema do caixeiro viajante é um problema computacional que consiste em enc
 
 <img src="assets/swapping-algorithm.png" alt="Resumo Escrito do Algoritmo">
 
-## TPS (Traveling Salesman Problem)
+## TSP (Traveling Salesman Problem)
 
 <img src="assets/Traveling_Salesman_Problem_Visualization.gif" alt="Visualização TSP">
 
 - Se preocupa com o menor caminho para passa por todos uma vez e voltar ao de origem (Optimização).
 
-## Hamiltonian Cycle (Reduzido do TPS)
+## Hamiltonian Cycle (Reduzido do TSP)
 
 <img src="assets/HamiltonianCycle.gif" alt="Visualização HamiltonianCycle">
 
