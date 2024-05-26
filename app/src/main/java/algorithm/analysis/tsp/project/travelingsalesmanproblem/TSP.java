@@ -14,7 +14,7 @@ public class TSP {
         this.weightedGraph = weightedGraph;
     }
 
-    public Integer[] swapEdges(Integer[] elements, int first, int second) {
+    private Integer[] swapEdges(Integer[] elements, int first, int second) {
         Integer[] swapped = new Integer[elements.length];
         outerElementFill(elements, swapped, first, second);
         int innerPos = first + 1;
@@ -42,6 +42,7 @@ public class TSP {
 
         for (int i = 0; i < currentSolution.length-2; i++) {
             for (int j = i+1; j < currentSolution.length-1; j++) {
+                System.out.println("current iteration: " + i);
                 Integer[] newRoute = swapEdges(currentSolution, i, j);
                 newDistance = calculateDistanceCost(newRoute);
                 if(newDistance< bestDistance){

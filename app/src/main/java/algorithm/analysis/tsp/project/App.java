@@ -6,10 +6,7 @@ package algorithm.analysis.tsp.project;
 import algorithm.analysis.tsp.project.travelingsalesmanproblem.TSP;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
+    
     public static void main(String[] args) {
         Integer[][] weightedGraph = {
                 { 0, 90, 100, 20, 30, 80 },
