@@ -11,4 +11,4 @@ O problema do caixeiro viajante é um problema computacional que consiste em enc
 
 ## Explicação do Algoritmo
 
-<img src="assets/swapping-algorithm.png" alt="Resumo Escrito do Algoritmo" width="100" height="100">
+<img src="assets/swapping-algorithm.png" alt="Resumo Escrito do Algoritmo">
