@@ -9,8 +9,6 @@ O problema do caixeiro viajante é um problema computacional que consiste em enc
 - [Rodrigo Manzella](https://github.com/RodManzella)
 - [Gil Araújo](https://github.com/Gil32610)
 
-## Explicação do Problema (Eduarda Pires):
+## Explicação do Algoritmo
 
-- [ ] tarefa1
-## Aplicação no Mundo Real (Rodrigo Manzella):
-
+![Resumo do Algoritmo] (assets/swapping-algorithm.png)
