@@ -1,5 +1,12 @@
 package algorithm.analysis.tsp.project.travelingsalesmanproblem;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import org.checkerframework.checker.units.qual.s;
+
 public class TSP {
     private Integer[][] weightedGraph;
 
@@ -26,25 +33,47 @@ public class TSP {
         }
     }
 
-    public Integer[][] generateNeighborhood(Integer[] solution) {
-        int solutionSize = solution.length;
-        
-        Integer[] newSolution = new Integer[sizeOfNeighborhood][solutionSize];
-        // implement 2-edge exchange or swap operator
-        return newSolution;
-    }
+    public void firstImprovementLocalSearch () {
+        Integer[] solution = generateSolution();
+        System.out.println(Arrays.toString(solution));
+        Integer newDistance = 0;
+        Integer bestDistance = calculateDistanceCost(solution);
+        Integer[] currentSolution = solution;
 
-    public Boolean acceptor(Integer[] currentSolution, Integer[] neighbor) {
-        Boolean isBetter = false;
-        return isBetter;
+        for (int i = 0; i < currentSolution.length-2; i++) {
+            for (int j = i+1; j < currentSolution.length-1; j++) {
+                Integer[] newRoute = swapEdges(currentSolution, i, j);
+                newDistance = calculateDistanceCost(newRoute);
+                if(newDistance< bestDistance){
+                    System.out.println("new distance is: " + newDistance);
+                    currentSolution = newRoute;
+                    bestDistance = newDistance;
+                }
+            }
+        }
+        System.out.println("Best distance is: " + bestDistance);
+        System.out.println("Best route is: " + Arrays.toString(currentSolution));
+
     }
 
     private int calculateDistanceCost(Integer[] solution) {
-        int cost = weightedGraph[solution[0]][solution[solution.length - 1]];
+        int firstElement = solution[0];
+        int lastElement = solution[solution.length-1];
+        int cost = weightedGraph[firstElement][lastElement];
         for (int i = 0; i < solution.length - 1; i++) {
             cost += weightedGraph[solution[i]][solution[i + 1]];
         }
         return cost;
+    }
+
+    private Integer[] generateSolution(){
+        Integer[] solution = new Integer[this.weightedGraph.length];
+        for (int i = 0; i < solution.length; i++) {
+            solution[i] = i;
+        }
+        List<Integer> shuffledSolution = Arrays.asList(solution);
+        Collections.shuffle(shuffledSolution);
+        return shuffledSolution.toArray(solution);
     }
 
 }

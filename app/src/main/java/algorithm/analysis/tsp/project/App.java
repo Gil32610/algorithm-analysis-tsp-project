@@ -3,12 +3,23 @@
  */
 package algorithm.analysis.tsp.project;
 
+import algorithm.analysis.tsp.project.travelingsalesmanproblem.TSP;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-
+        Integer[][] weightedGraph = {
+                { 0, 90, 100, 20, 30, 80 },
+                { 90, 0, 40, 10, 40, 90 },
+                { 100, 40, 0, 80, 120, 30 },
+                { 20, 10, 80, 0, 20, 10 },
+                { 30, 40, 120, 80, 0, 8 },
+                { 80, 90, 30, 10, 8, 0 }
+        };
+        TSP tsp = new TSP(weightedGraph);
+        tsp.firstImprovementLocalSearch();
     }
 }
