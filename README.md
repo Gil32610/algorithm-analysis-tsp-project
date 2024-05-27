@@ -1,6 +1,6 @@
 # Problema do Caixeiro Viajante
 
-## Descrição:
+## Descrição do problema:
 O problema do caixeiro viajante é um problema computacional que consiste em encontrar um ciclo hamiltoniano de custo mínimo em um digrafo.
 
 ## Integrantes:
@@ -9,11 +9,11 @@ O problema do caixeiro viajante é um problema computacional que consiste em enc
 - [Rodrigo Manzella](https://github.com/RodManzella)
 - [Gil Araújo](https://github.com/Gil32610)
 
-## Explicação do Algoritmo
+## Explicação de funcionamento do algoritmo
 
 <img src="assets/swapping-algorithm.png" alt="Resumo Escrito do Algoritmo">
 
-## TSP (Traveling Salesman Problem)
+## TSP (Travelling Salesman Problem)
 
 <img src="assets/Traveling_Salesman_Problem_Visualization.gif" alt="Visualização TSP">
 
